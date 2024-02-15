@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import static org.assertj.core.api.Assertions.*;
+
 class PokemonTest {
     @Test
     public void pokemon1_devrait_gagner_si_meilleure_attaque() {
@@ -15,7 +17,7 @@ class PokemonTest {
         var resultat = pokemon1.estVainqueurContre(pokemon2);
 
         // THEN
-        assertEquals(true, resultat);
+        assertThat(resultat).isTrue();
     }
 
     @Test
@@ -28,7 +30,7 @@ class PokemonTest {
         var resultat = pokemon2.estVainqueurContre(pokemon1);
 
         // THEN
-        assertEquals(true, resultat);
+        assertThat(resultat).isTrue();
     }
 
     @Test
@@ -41,7 +43,7 @@ class PokemonTest {
         var resultat = pokemon1.estVainqueurContre(pokemon2);
 
         // THEN
-        assertEquals(true, resultat);
+        assertThat(resultat).isTrue();
     }
 
     @Test
@@ -54,7 +56,7 @@ class PokemonTest {
         var resultat = pokemon2.estVainqueurContre(pokemon1);
 
         // THEN
-        assertEquals(true, resultat);
+        assertThat(resultat).isTrue();
     }
 
     @Test
@@ -67,6 +69,6 @@ class PokemonTest {
         var resultat = pokemon1.estVainqueurContre(pokemon2);
 
         // THEN
-        assertEquals(true, resultat);
+        assertThat(resultat).isTrue();
     }
 }
